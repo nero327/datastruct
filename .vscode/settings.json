@@ -1,0 +1,8 @@
+{
+  "clangd.path": "/usr/bin/clangd-13",
+  "clangd.arguments": [
+    "--query-driver=/usr/bin/clang++-13",
+    "--background-index",
+    "--clang-tidy"
+  ]
+}
