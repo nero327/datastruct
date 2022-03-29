@@ -8,6 +8,7 @@ int main(){
     p1 = &a;
     p2 = &p1;
     p3 = &p2;
+    p3 = &a;
 
     printf("%p\n",&a);
     printf("%p\n",p1);
