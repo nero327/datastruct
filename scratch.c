@@ -1,10 +1,25 @@
 #include<stdio.h>
-typedef struct Lnode
+#include<stdlib.h>
+typedef struct node2
 {
-    int data;   
-}Lnode,*LinkList;
-
+    int a;
+    struct node2 *next;
+}node,*ptrnode;
 int main(){
-    int a =5/2;
-    printf("%d",a);
+    node x;
+    node y;
+    node z;
+    x.a=1;
+    ptrnode p =&x;
+    p->next=&y;
+    y.a =2;
+    y.next=&z;
+    z.a=3;
+    z.next=NULL;
+    while (p)
+    {
+        printf("%d",p->a);
+        p=p->next;
+    }
+    
 }
