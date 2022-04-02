@@ -6,7 +6,7 @@ typedef struct node{
     struct node *next;
 }Lnode,*LinkList;
 
-LinkList List_HeadInsert(LinkList Head){
+LinkList List_HeadInsert(LinkList &Head){
     Lnode *s;
     int x;
     Head=(LinkList)malloc(sizeof(Lnode));
@@ -79,18 +79,18 @@ int main(){
     Lnode *m=NULL;
     Lnode *o=NULL;
     Lnode *l=NULL;
-    o=(Lnode *)malloc(2*sizeof(Lnode));
+    p=(Lnode *)malloc(sizeof(Lnode));
     // printf("%d",o->data);
-    l=o->next;
-    printf("%d",o->data);
-    printf("%d",l->data);
-
-    // p=List_HeadInsert(p);
+    // l=o->next;
+    // printf("%d",o->data);
+    // printf("%d",l->data);
+    // p->data=6;
+    p=List_HeadInsert(p);
     // p=List_TailInsert(p);
-    // while(p)
-    // {
-    //     printf("%d\n",p->data);
-    //     p=p->next;
-    // }
+    while(p)
+    {
+        printf("%d\n",p->data);
+        p=p->next;
+    }
     // printf("%d",GetElem(p,3)->data);   
 }

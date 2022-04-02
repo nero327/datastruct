@@ -5,21 +5,11 @@ typedef struct node2
     int a;
     struct node2 *next;
 }node,*ptrnode;
+void Initlist(ptrnode L){
+    L=(ptrnode)malloc(sizeof(node));
+    L->next=NULL;
+}
 int main(){
-    node x;
-    node y;
-    node z;
-    x.a=1;
-    ptrnode p =&x;
-    p->next=&y;
-    y.a =2;
-    y.next=&z;
-    z.a=3;
-    z.next=NULL;
-    while (p)
-    {
-        printf("%d",p->a);
-        p=p->next;
-    }
+    Initlist(L);
     
 }
