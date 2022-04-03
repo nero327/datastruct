@@ -94,6 +94,8 @@ int main(){
     {
         printf("%d\n",p->data);
         p=p->next;
+
+        
     }
     // printf("%d",GetElem(p,3)->data);   
 }
