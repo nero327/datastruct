@@ -1,2 +1,5 @@
 
-    // printf("%d",o->dat
+    {
+        printf("%d\n",m->data);
+        m=m->next;
+    }

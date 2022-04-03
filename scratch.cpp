@@ -6,28 +6,23 @@ typedef struct node{
     struct node *next;
 }Lnode,*LinkList;
 
-LinkList List_HeadInsert(LinkList &Head){
+LinkList List_HeadInsert(LinkList Head){
     Lnode *s;
     int x;
+    Lnode *h;
     Head=(LinkList)malloc(sizeof(Lnode));
-    Head=NULL;
-    int n=0;
+    // Head->next=NULL;
+    h=Head;
+    h->next=NULL;
     scanf("%d",&x);
     while (x!=888)
     {   
         s=(LinkList)malloc(sizeof(Lnode));
-        if(n==0){
-            Head=s;
-            Head->next=NULL;
-        }
-        else{
         s->data=x;
-        s->next=Head->next;
-        Head->next=s;
-        }
+        s->next=h->next;
+        h->next=s;
         scanf("%d",&x);
-        n++;
-    }
+        }
     return Head;
 }
 LinkList List_TailInsert(LinkList L){
@@ -68,29 +63,38 @@ Lnode *GetElem(LinkList L,int i){
 }
 Lnode *LocatedElem(LinkList L,int x){
     Lnode *p =L->next;
-    while (p!=NULL&&p->data!=x)
+    while (p&&p->data!=x)
     {
         p=p->next;
     }
     return p;
 }
+bool IsLocatedElem(LinkList L,int x){
+    Lnode *p =L->next;
+    bool flag=false;
+    while (p)
+    {   
+        while (p->data=x)
+        {
+            flag = true;
+        }
+        
+        p=p->next;
+        
+    }
+    return flag;
+    
+}
 int main(){
     Lnode *p=NULL;
     Lnode *m=NULL;
-    Lnode *o=NULL;
-    Lnode *l=NULL;
-    p=(Lnode *)malloc(sizeof(Lnode));
-    // printf("%d",o->data);
-    // l=o->next;
-    // printf("%d",o->data);
-    // printf("%d",l->data);
-    // p->data=6;
-    p=List_HeadInsert(p);
-    // p=List_TailInsert(p);
-    while(p)
+    // m=List_HeadInsert(p);
+    m=List_TailInsert(p);
+    while(m)
     {
-        printf("%d\n",p->data);
-        p=p->next;
+        printf("%d\n",m->data);
+        m=m->next;
     }
-    // printf("%d",GetElem(p,3)->data);   
+    // bool t =IsLocatedElem(m,3);
+    // printf("%d",t);   
 }

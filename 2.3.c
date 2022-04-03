@@ -8,25 +8,20 @@ typedef struct node{
 
 LinkList List_HeadInsert(LinkList Head){
     Lnode *s;
+    Lnode *h;
     int x;
     Head=(LinkList)malloc(sizeof(Lnode));
-    Head=NULL;
-    int n=0;
+    Head->next=NULL;
+    h=Head;
     scanf("%d",&x);
     while (x!=888)
     {   
         s=(LinkList)malloc(sizeof(Lnode));
-        if(n==0){
-            Head=s;
-            Head->next=NULL;
-        }
-        else{
         s->data=x;
-        s->next=Head->next;
-        Head->next=s;
-        }
+        s->next=h->next;
+        h->next=s;
+        
         scanf("%d",&x);
-        n++;
     }
     return Head;
 }
@@ -74,23 +69,31 @@ Lnode *LocatedElem(LinkList L,int x){
     }
     return p;
 }
+void DelteNode(LinkList L,int x){
+    LinkList p;
+    LinkList q;
+    p=GetElem(L,x-1);
+    q=p->next;
+    p->next=q->next;
+    free(q);
+
+}
 int main(){
     Lnode *p=NULL;
     Lnode *m=NULL;
-    Lnode *o=NULL;
-    Lnode *l=NULL;
-    o=(Lnode *)malloc(2*sizeof(Lnode));
-    // printf("%d",o->data);
-    l=o->next;
-    printf("%d",o->data);
-    printf("%d",l->data);
 
     // p=List_HeadInsert(p);
-    // p=List_TailInsert(p);
-    // while(p)
-    // {
-    //     printf("%d\n",p->data);
-    //     p=p->next;
-    // }
+    p=List_TailInsert(p);
+    while(p)
+    {
+        printf("%d\n",p->data);
+        p=p->next;
+    }
+    DelteNode(p,3);
+    while(p)
+    {
+        printf("%d\n",p->data);
+        p=p->next;
+    }
     // printf("%d",GetElem(p,3)->data);   
 }
