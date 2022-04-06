@@ -78,24 +78,37 @@ void DelteNode(LinkList L,int x){
     free(q);
 
 }
+void Delete01(LinkList L,int x){
+    LinkList p;
+    if(L==NULL)
+    return;
+    if(p->data==x)
+    {p=L;
+    L=L->next;
+    free(p);
+    Delete01(L,x);
+    }
+    else
+    Delete01(L->next,x);    
+}
 int main(){
     Lnode *p=NULL;
     Lnode *m=NULL;
 
     // p=List_HeadInsert(p);
     p=List_TailInsert(p);
-    while(p)
-    {
-        p=p->next;
-        printf("%d\n",p->data);
-    }
-    DelteNode(p,3);
-    while(p)
-    {
-        p=p->next;
-        printf("%d\n",p->data);
+    // while(p)
+    // {
+    //     p=p->next;
+    //     printf("%d\n",p->data);
+    // }
+    Delete01(p,3);
+    // while(p)
+    // {
+    //     p=p->next;
+    //     printf("%d\n",p->data);
 
         
-    }
+    // }
     // printf("%d",GetElem(p,3)->data);   
 }
