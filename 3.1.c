@@ -8,19 +8,21 @@ typedef struct
     int top;
 }SqStack;
 
-void InitStack(SqStack S){
-    S.top=-1;
+void InitStack(SqStack *S){
+    SqStack *p=NULL;
+    p=S;
+    p->top=-1;
 }
 
-bool StackIsEmpty(SqStack S){
-    return (S.top==-1? true:false);
+bool StackIsEmpty(SqStack *S){
+    return (S->top==-1? true:false);
 }
 
-bool Push(SqStack S,int x){
-    if(S.top==MaxSize-1){
+bool Push(SqStack *S,int x){
+    if(S->top==MaxSize-1){
         return false;
     }
-    S.data[++S.top]=x;
+    S->data[++S->top]=x;
     return true;
 }
 
@@ -43,11 +45,13 @@ int GetTop(SqStack S){
 
 int main(){
     SqStack S;
-    InitStack(S);
-    Push(S,1);
-    Push(S,2);
-    Push(S,3);
-    printf("%d",GetTop(S));
+    SqStack *p=NULL;
+    p=&S;
+    InitStack(p);
+    // Push(p,1);
+    // Push(p,2);
+    // Push(p,3);
+    printf("%d",StackIsEmpty(p));
 }
 
 
