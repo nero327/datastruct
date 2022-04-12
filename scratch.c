@@ -5,13 +5,14 @@ bool equal(int a,int b){
     return (a==b? true:false);
 }
 int main(){
-    int a=1;
-    int b=0;
-    b=--a;
-    printf("%d",b);
-    a=1;
-    b=a--;
-    printf("%d",b);
-    printf("%d",a);
+    int x=5;
+    int i=0;
+    for ( i = 0; i < x/2;i++)
+    {
+        printf("%d\n",i);
+    }
+    
+        printf("%d\n",i);
+        printf("%d",x/2);
     
 }

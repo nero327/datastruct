@@ -34,7 +34,7 @@ bool Pop(LinkStack s){
 }
 
 bool StackEmpty(LinkStack s){
-    return(s->next==NULL? true:false);
+    return(s->next==NULL?true:false);
 }
 int StackLength(LinkStack s){
     int x=0;
@@ -65,10 +65,20 @@ int main(){
     Push(s,3);
     Push(s,4);
     Push(s,5);
-    x=StackLength(s);
-    printf("Length:%d\n",x);
+    Push(s,5);
+    Push(s,5);
+    Push(s,5);
+    Push(s,5);
+    printf("Length:%d\n",StackLength(s));
     Pop(s);
-    Push(s,9);
+    Pop(s);
+    Pop(s);
+    Pop(s);
+    Pop(s);
+    Pop(s);
+    printf("Length:%d\n",StackLength(s));
+    // Push(s,9);
     printf("%d\n",Gettop(s));
+    printf("%d\n",StackEmpty(s));
 }
 
