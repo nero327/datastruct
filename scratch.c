@@ -13,6 +13,7 @@ int main(){
     }
     
         printf("%d\n",i);
-        printf("%d",x/2);
+        printf("%d\n",x/2);
+        printf("%d\n",15%10);
     
 }
