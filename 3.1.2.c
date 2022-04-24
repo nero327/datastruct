@@ -9,11 +9,11 @@ typedef struct Linknode
 
 LinkStack InitStack(LinkStack s){
     s=(LinkStack)malloc(sizeof(Stack));
-    s->next=NULL;
+    s->next=nullptr;
     return s;
 }
 bool Push(LinkStack s,int x){
-    LinkStack p=NULL;
+    LinkStack p=nullptr;
     p=(LinkStack)malloc(sizeof(Stack));
     p->data=x;
     p->next=s->next;
@@ -21,8 +21,8 @@ bool Push(LinkStack s,int x){
     return true;
 }
 bool Pop(LinkStack s){
-    LinkStack p=NULL;
-    if(s->next==NULL){
+    LinkStack p=nullptr;
+    if(s->next==nullptr){
         return false;
     }
     else{
@@ -34,7 +34,7 @@ bool Pop(LinkStack s){
 }
 
 bool StackEmpty(LinkStack s){
-    return(s->next==NULL?true:false);
+    return(s->next==nullptr?true:false);
 }
 int StackLength(LinkStack s){
     int x=0;
@@ -49,7 +49,7 @@ int StackLength(LinkStack s){
 
 int Gettop(LinkStack s){
     int p=0;
-    if (s->next==NULL)
+    if (s->next==nullptr)
     {
         return p;
     }   
@@ -57,7 +57,7 @@ int Gettop(LinkStack s){
     return p;
 }
 int main(){
-    LinkStack s=NULL;
+    LinkStack s=nullptr;
     s=InitStack(s);
     int x=0;
     Push(s,1);

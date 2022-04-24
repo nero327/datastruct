@@ -2,9 +2,9 @@
 int main(){
     int a = 100;
     int b[2]={1,2};
-    int *p1=NULL;
-    int **p2=NULL;
-    int ***p3=NULL;
+    int *p1=nullptr;
+    int **p2=nullptr;
+    int ***p3=nullptr;
     p1 = &a;
     p2 = &p1;
     p3 = &p2;

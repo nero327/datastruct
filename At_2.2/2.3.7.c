@@ -7,11 +7,11 @@ typedef struct node {
 }Lnode, * LinkList;
 
 LinkList List_HeadInsert(LinkList Head) {
-    Lnode* s = NULL;
-    Lnode* h = NULL;
+    Lnode* s = nullptr;
+    Lnode* h = nullptr;
     int x = 0;
     Head = (LinkList)malloc(sizeof(Lnode));
-    Head->next = NULL;
+    Head->next = nullptr;
     h = Head;
     scanf("%d", &x);
     while (x != 888)
@@ -28,8 +28,8 @@ LinkList List_HeadInsert(LinkList Head) {
 LinkList List_TailInsert(LinkList L) {
     int x = 0;
     L = (LinkList)malloc(sizeof(Lnode));
-    LinkList s = NULL;
-    LinkList r = NULL;
+    LinkList s = nullptr;
+    LinkList r = nullptr;
     r = L;
     scanf("%d", &x);
     while (x != 888)
@@ -42,12 +42,12 @@ LinkList List_TailInsert(LinkList L) {
         scanf("%d", &x);
 
     }
-    r->next = NULL;
+    r->next = nullptr;
     return L;
 
 }
 Lnode* GetElem(LinkList L, int i) {
-    Lnode* p = NULL;
+    Lnode* p = nullptr;
     p = L->next;
     if (i == 0)
     {        
@@ -55,7 +55,7 @@ return L;
 }
     if (i < 1)
     {        
-return NULL;
+return nullptr;
     }
     int j = 1;
     while (p && j < i)
@@ -67,17 +67,17 @@ return NULL;
 
 }
 Lnode* LocatedElem(LinkList L, int x) {
-    Lnode* p = NULL;
+    Lnode* p = nullptr;
     p = L->next;
-    while (p != NULL && p->data != x)
+    while (p != nullptr && p->data != x)
     {
         p = p->next;
     }
     return p;
 }
 void DelteNode(LinkList L, int x) {
-    LinkList p = NULL;
-    LinkList q = NULL;
+    LinkList p = nullptr;
+    LinkList q = nullptr;
     p = GetElem(L, x - 1);
     q = p->next;
     p->next = q->next;
@@ -85,8 +85,8 @@ void DelteNode(LinkList L, int x) {
 
 }
 void Delete01(LinkList L, int x) {
-    LinkList p = NULL;
-    if (L == NULL) {
+    LinkList p = nullptr;
+    if (L == nullptr) {
         return;
     }
     if (p->data == x)
@@ -101,9 +101,9 @@ p = L;
     }
 }
 void DeleteAllx(LinkList L, int x) {
-    LinkList q = NULL;
-    LinkList temp = NULL;
-    LinkList p = NULL;
+    LinkList q = nullptr;
+    LinkList temp = nullptr;
+    LinkList p = nullptr;
     q = L;
     p = L->next;
     while (p)
@@ -146,7 +146,7 @@ void PrintL_Reverse(LinkList L) {
 
 }
 int main() {
-    Lnode* p = NULL;
+    Lnode* p = nullptr;
     // Lnode *m=NULL;
 
     p = List_HeadInsert(p);

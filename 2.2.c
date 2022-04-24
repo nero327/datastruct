@@ -11,7 +11,7 @@ void InistList(SqList *p){
 
 int main(){
     SqList L;
-    SqList *p=NULL;
+    SqList *p=nullptr;
     p = &L;
     InistList(p);
     

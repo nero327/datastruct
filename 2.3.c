@@ -11,7 +11,7 @@ LinkList List_HeadInsert(LinkList Head){
     Lnode *h;
     int x;
     Head=(LinkList)malloc(sizeof(Lnode));
-    Head->next=NULL;
+    Head->next=nullptr;
     h=Head;
     scanf("%d",&x);
     while (x!=888)
@@ -42,7 +42,7 @@ LinkList List_TailInsert(LinkList L){
         scanf("%d",&x);
     
     }
-    r->next=NULL;
+    r->next=nullptr;
     return L;
     
 }
@@ -51,7 +51,7 @@ Lnode *GetElem(LinkList L,int i){
     if(i==0)
     return L;
     if(i<1)
-    return NULL;
+    return nullptr;
     int j =1;
     while (p&&j<i)
     {
@@ -63,7 +63,7 @@ Lnode *GetElem(LinkList L,int i){
 }
 Lnode *LocatedElem(LinkList L,int x){
     Lnode *p =L->next;
-    while (p!=NULL&&p->data!=x)
+    while (p!=nullptr&&p->data!=x)
     {
         p=p->next;
     }
@@ -79,8 +79,8 @@ void DelteNode(LinkList L,int x){
 
 }
 int main(){
-    Lnode *p=NULL;
-    Lnode *m=NULL;
+    Lnode *p=nullptr;
+    Lnode *m=nullptr;
 
     // p=List_HeadInsert(p);
     p=List_TailInsert(p);

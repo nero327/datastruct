@@ -9,8 +9,8 @@ typedef struct
     int top;
 }SqStack;
 
-void InitStack(SqStack *S){
-    SqStack *p=NULL;
+extern void InitStack(SqStack *S){
+    SqStack *p=nullptr;
     p=S;
     p->top=-1;
 }
@@ -71,7 +71,7 @@ bool CheckBracket(char str[],int length){
 }
 int main(){
     SqStack S;
-    SqStack *p=NULL;
+    SqStack *p=nullptr;
     p=&S;
     InitStack(p);
     // Push(p,1);

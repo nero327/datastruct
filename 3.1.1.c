@@ -9,7 +9,7 @@ typedef struct
 }SqStack;
 
 void InitStack(SqStack *S){
-    SqStack *p=NULL;
+    SqStack *p=nullptr;
     p=S;
     p->top=-1;
 }
@@ -45,7 +45,7 @@ int GetTop(SqStack S){
 
 int main(){
     SqStack S;
-    SqStack *p=NULL;
+    SqStack *p=nullptr;
     p=&S;
     InitStack(p);
     // Push(p,1);
