@@ -59,8 +59,4 @@ static bool Gettop(LinkStack s,ElemType &x){
     x=s->next->data;   
     return true;
 }
-class A{
-    static const int aa=1;
-    int bb=1;
-};
 
