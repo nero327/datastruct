@@ -1,6 +1,10 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<stdbool.h>
+typedef struct scratch
+{
+    char ch;
+}str;
 bool equal(int a,int b){
     return (a==b? true:false);
 }
@@ -27,22 +31,11 @@ int qwe(char *n){
     // *(p++)=*q;
 
 }
+
 int main(){
-    char x[]="5";
-    // char str[]="66666";
-    char str[]={'6','5','7'};
-    // int i=0;
-    // for ( i = 0; i < x/2;i++)
-    // {
-    //     printf("%d\n",i);
-    // }
-    char a[]="qwert";
-    char *p=a;
-    qwe(p);
-    printf("%s",a);
-    //     printf("%d\n",i);
-    //     printf("%d\n",x/2);
-    //     printf("%d\n",15%10);
-        // printf("%d\n",x=="[0_9]");
-    // printf("%s",rr(str));    
+    str a;
+    char aq[]="fafafafafafafa";
+    a.ch=*aq;
+    // cout<<""<<ch<<endl;
+    printf("%s",&a.ch);    
 }

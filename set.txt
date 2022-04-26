@@ -1,2 +1,2 @@
   "c": "cd $dir && gcc $fileName -o /root/RemoteWorking/datastruct/exe/$fileNameWithoutExt && /root/RemoteWorking/datastruct/exe/$fileNameWithoutExt",
-    "cpp": "cd $dir && g++ $fileName -o /root/RemoteWorking/datastruct/exe/$fileNameWithoutExt && /root/RemoteWorking/datastruct/exe/$fileNameWithoutExt",
+      "cpp": "cd $dir && g++ $fileName -o /root/RemoteWorking/datastruct/exe/$fileNameWithoutExt && /root/RemoteWorking/datastruct/exe/$fileNameWithoutExt",

@@ -1,84 +1,79 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<stdbool.h>
-typedef struct Linknode
-{
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+typedef struct Linknode {
     int data;
-    struct Linknode *next;
-}Stack,*LinkStack;
+    struct Linknode* next;
+} Stack, *LinkStack;
 
-LinkStack InitStack(LinkStack s){
-    s=(LinkStack)malloc(sizeof(Stack));
-    s->next=nullptr;
+LinkStack InitStack(LinkStack s) {
+    s = (LinkStack)malloc(sizeof(Stack));
+    s->next = NULL;
     return s;
 }
-bool Push(LinkStack s,int x){
-    LinkStack p=nullptr;
-    p=(LinkStack)malloc(sizeof(Stack));
-    p->data=x;
-    p->next=s->next;
-    s->next=p;
+bool Push(LinkStack s, int x) {
+    LinkStack p = NULL;
+    p = (LinkStack)malloc(sizeof(Stack));
+    p->data = x;
+    p->next = s->next;
+    s->next = p;
     return true;
 }
-bool Pop(LinkStack s){
-    LinkStack p=nullptr;
-    if(s->next==nullptr){
+bool Pop(LinkStack s) {
+    LinkStack p = NULL;
+    if (s->next == NULL) {
         return false;
-    }
-    else{
-        p=s->next;
-        s->next=p->next;
+    } else {
+        p = s->next;
+        s->next = p->next;
         free(p);
     }
     return true;
 }
 
-bool StackEmpty(LinkStack s){
-    return(s->next==nullptr?true:false);
+bool StackEmpty(LinkStack s) {
+    return (s->next == NULL ? true : false);
 }
-int StackLength(LinkStack s){
-    int x=0;
-    s=s->next;
-    while (s)
-    {
-        s=s->next;
+int StackLength(LinkStack s) {
+    int x = 0;
+    s = s->next;
+    while (s) {
+        s = s->next;
         x++;
     }
     return x;
 }
 
-int Gettop(LinkStack s){
-    int p=0;
-    if (s->next==nullptr)
-    {
+int Gettop(LinkStack s) {
+    int p = 0;
+    if (s->next == NULL) {
         return p;
-    }   
-    p=s->next->data;   
+    }
+    p = s->next->data;
     return p;
 }
-int main(){
-    LinkStack s=nullptr;
-    s=InitStack(s);
-    int x=0;
-    Push(s,1);
-    Push(s,2);
-    Push(s,3);
-    Push(s,4);
-    Push(s,5);
-    Push(s,5);
-    Push(s,5);
-    Push(s,5);
-    Push(s,5);
-    printf("Length:%d\n",StackLength(s));
+int main() {
+    LinkStack s = NULL;
+    s = InitStack(s);
+    int x = 0;
+    Push(s, 1);
+    Push(s, 2);
+    Push(s, 3);
+    Push(s, 4);
+    Push(s, 5);
+    Push(s, 5);
+    Push(s, 5);
+    Push(s, 5);
+    Push(s, 5);
+    printf("Length:%d\n", StackLength(s));
     Pop(s);
     Pop(s);
     Pop(s);
     Pop(s);
     Pop(s);
     Pop(s);
-    printf("Length:%d\n",StackLength(s));
+    printf("Length:%d\n", StackLength(s));
     // Push(s,9);
-    printf("%d\n",Gettop(s));
-    printf("%d\n",StackEmpty(s));
+    printf("%d\n", Gettop(s));
+    printf("%d\n", StackEmpty(s));
 }
-
