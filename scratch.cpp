@@ -9,5 +9,11 @@ int main(){
     scratch a;
     char b[]="fafafaf";
     a.ch=b;
-    cout<<""<<a.ch<<endl;
+    char *p=b;
+    cout<<(*(p+1))<<endl;
+    int c = 1;
+    // if (c == 1 && c < 0) {
+    //     cout << "haha" << endl;
+    // }
+    // cout<<""<<a.ch<<endl;
 }
