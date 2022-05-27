@@ -37,5 +37,14 @@ int main(){
     char aq[]="fafafafafafafa";
     a.ch=*aq;
     // cout<<""<<ch<<endl;
-    printf("%s",&a.ch);    
+    // printf("%s",&a.ch);
+    int b=1;
+    int i;
+    int c[]={2};
+    for( i=1;i<2;i++)
+        printf("%d",i);    
+    printf("%d",i);    
+    
+    // printf("%d",--b);    
+    // printf("%d",b);    
 }
