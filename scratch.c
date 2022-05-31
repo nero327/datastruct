@@ -58,6 +58,8 @@ bool HuiWen(int a){
     for(int i=a;i>0;i/=10){
         b[j++]=i%10;
     }
+
+    
     if(j%2=0)
         for(int m=o;i<=j/2-1;m++)
             if(b[m]==b[j-1-m])
