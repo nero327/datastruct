@@ -4,5 +4,6 @@
     "--query-driver=/usr/bin/clang++-13",
     "--background-index",
     "--clang-tidy"
-  ]
+  ],
+  "C_Cpp.errorSquiggles": "Disabled"
 }
