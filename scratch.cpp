@@ -17,10 +17,8 @@ int MoveP(int *a,int b,int p){
 int main(){
     scratch a;
     int r[]={1,2,3,4,5,6};
-    for(int i=0;i<6;i++){
-        cout<<""<<r[i]<<endl;
-    }
-    cout<<""<<endl;
+    int b=2;
+    cout<<""<<b/2<<endl;
     MoveP(r,6,3);
     for(int i=0;i<6;i++){
         cout<<""<<r[i]<<endl;
