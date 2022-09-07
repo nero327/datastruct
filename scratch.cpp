@@ -4,16 +4,25 @@ struct scratch
 {
     char *ch;
 };
-
+int MoveP(int *a,int b,int p){
+    for (int i=0; i<p; i++) {
+    int n=a[0];
+    for (int j=0; j<b; j++) {
+    a[j]=a[j+1];
+    }
+    a[b-1]=n;
+    }
+    // return a;
+}
 int main(){
     scratch a;
-    char b[]="fafafaf";
-    a.ch=b;
-    char *p=b;
-    cout<<(*(p+1))<<endl;
-    int c = 1;
-    // if (c == 1 && c < 0) {
-    //     cout << "haha" << endl;
-    // }
-    // cout<<""<<a.ch<<endl;
+    int r[]={1,2,3,4,5,6};
+    for(int i=0;i<6;i++){
+        cout<<""<<r[i]<<endl;
+    }
+    cout<<""<<endl;
+    MoveP(r,6,3);
+    for(int i=0;i<6;i++){
+        cout<<""<<r[i]<<endl;
+    }
 }

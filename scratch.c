@@ -45,7 +45,7 @@ void cf() {
     }
 }
 
-bool HuiWen(int a) {
+bool HuiWen(int a){
     int* b = (int*)malloc(sizeof(int) * 10);
     int j = 0;
     if (a < 0)
@@ -54,18 +54,41 @@ bool HuiWen(int a) {
         b[j++] = i % 10;
     }
     j--;
-    for (int m = 0,n=j; m <=n ; m++,n--) {
+    for (int m = 0, n = j; m <= n; m++, n--) {
         if (b[m] != b[n])
             return false;
     }
-    printf("%d\n",j);
+    return true;
+}
+bool makesquare(int* matchsticks) {
+    int length = sizeof(matchsticks) / 4;
+    if (length < 4) {
+        return false;
+    }
+    int sum = 0;
+    for (int i = 0; i < length; i++) {
+        sum = sum + matchsticks[i];
+    }
+    if (sum % 4 != 0) {
+        return false;
+    }
+    int b = sum / 4;
+    for (int j = 0; j < length; j++) {
+        if (matchsticks[j] > b)
+            return false;
+    }
     return true;
 }
 
 int main() {
-    int a = 1;
-    // HuiWen(a);
-    // a%=2;
-    printf("%d\n", HuiWen(a));
-    // printf("%d\n",a);
+    int a[11]={1};
+    for(int k=0;k<=10;k++){
+        a[k]+=32;
+    }
+    printf("%d\n",a[0]);
+    printf("%d\n",a[1]);
+    printf("%d\n",a[2]);
+    printf("%d\n",a[3]);
+
+    
 }
