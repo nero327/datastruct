@@ -28,7 +28,7 @@ int TwoMid(int a[],int b[],int l){
     return mid;
 }
 int main(){
-    // 2010统考123
+    // 2010统考
     // int r[]={1,2,3,4,5,6};
     // int b=2;
     // cout<<b/2<<endl;
