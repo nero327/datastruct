@@ -88,7 +88,7 @@ int main(){
     printf("\n");
     if( Del_Min(p,p1))
     printf("%d",e);
-    for(int i= 0;i<L.Length;i++)
+    for(int i= 0;i<L.Length;i++) 
         printf("data[%d]:%d\n",i,L.data[i]);
     return 0;
  }

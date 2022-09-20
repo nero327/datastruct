@@ -38,5 +38,5 @@ int main(){
     L.elem[8]=23;
     L.elem[9]=40;
     L.TableLen=length;
-    printf("%d",Binary_Search(L,40));
+    printf("%d",Binary_Search(L,22));
 }

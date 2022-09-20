@@ -7,11 +7,11 @@ typedef struct node{
 }Lnode,*LinkList;
 
 LinkList List_HeadInsert(LinkList Head) {
-    Lnode* s = nullptr;
-    Lnode* h = nullptr;
+    Lnode* s = NULL;
+    Lnode* h = NULL;
     int x = 0;
     Head = (LinkList)malloc(sizeof(Lnode));
-    Head->next = nullptr;
+    Head->next = NULL;
     h = Head;
     scanf("%d", &x);
     while (x != 888)
@@ -60,8 +60,8 @@ int LinkLength(LinkList L){
     
 }
 int main(){
-    LinkList L =nullptr;
-    LinkList p =nullptr;
+    LinkList L =NULL;
+    LinkList p =NULL;
     int x=0;
     p=List_HeadInsert(L);
     x=LinkLength(p);

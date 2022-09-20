@@ -73,8 +73,9 @@ int main(){
     printf("%d\n",L.Length);
     for(int i= 0;i<L.Length;i++)
         printf("data[%d]:%d\n",i,L.data[i]);
-    if (ListDelete(p,3,p1))
-    printf("deleted:%d\n",e);
+    if (ListDelete(p,3,p1)){
+        printf("deleted:%d\n",e);
+        }
     printf("%d\n",L.Length);
     printf("size:%d\n",L.MaxSize);
     IncreaseSize(p,15);
@@ -82,4 +83,4 @@ int main(){
     printf("size:%d\n",L.MaxSize);
     return 0;
  }
-
+    

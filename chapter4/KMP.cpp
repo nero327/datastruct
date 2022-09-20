@@ -6,7 +6,7 @@ typedef struct {
     char* ch;
     int length;
 } SString;
-void get_next(SString T,int next[]) {
+void *get_next(SString T,int next[]) {
     int i = 1;
     int j = 0;
     next[1] = 0;
@@ -19,7 +19,7 @@ void get_next(SString T,int next[]) {
             j = next[j];
         }
     }
-    // return next;
+    return next;
     // for(int m=1;m<=i;m++)
     // cout<<next[m]<<endl;
 }
@@ -41,11 +41,11 @@ int Index_KMP(SString S, SString T, int next[]) {
 }
 int main(){
     SString S,T;
-    char a[] = "#abceeea";
-    char b[] = "#ababceeea";
+    char a[] = "#abcd";
+    char b[] = "#aabcd";
     T.ch = a;
-    T.length = 7;
-    S.length = 10;
+    T.length = 4;
+    S.length = 5;
     S.ch = b;
     // int next[]={};
     int next[100]={};

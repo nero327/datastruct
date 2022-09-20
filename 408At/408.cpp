@@ -36,12 +36,11 @@ int main(){
     // for(int i=0;i<6;i++){
     //     cout<<r[i]<<endl;
     // }
-    // 2011统考123
+    // 2011统考
     int a[]={11,13,15,17,19};
     int b[]={2,4,6,8,20};
     int mid=TwoMid(a, b, 5);
     cout<<mid<<endl;
     //2013统考
-    
-    return 0;
+    return 0;   
 }

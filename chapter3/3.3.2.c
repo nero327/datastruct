@@ -121,10 +121,10 @@ int main(){
     // Push(p,1);
     // Push(p,2);
     // Push(p,3);
-    char str[]="1+1*1";
+    // char str[]="{{}{}{}}";
+    char str[]="(1+1)*2";
     printf("%s",TranPolish(str));
     // CheckBracket(str,6);
-    // printf("%d",CheckBracket(str,7));
+    // printf("%d\n",CheckBracket(str,8));
     // printf("%d",StackIsEmpty(p));
 }
-

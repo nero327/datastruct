@@ -1,4 +1,3 @@
-   // while (i <= mid)
-    //     a[k++] = B[i++];
-    // while (j <= high)
- 
+temp=a[i];
+        a[i]=a[min];
+        

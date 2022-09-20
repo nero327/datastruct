@@ -11,11 +11,11 @@ typedef struct
 void InitStack(SqStack *S){
     SqStack *p=NULL;
     p=S;
-    p->top=-1;
+   p->top=-1;
 }
 
 bool StackIsEmpty(SqStack *S){
-    return (S->top==-1? true:false);
+    return S->top==-1? true:false;
 }
 
 bool Push(SqStack *S,int x){
@@ -48,18 +48,10 @@ int main(){
     SqStack *p=NULL;
     p=&S;
     InitStack(p);
-    // Push(p,1);
-    // Push(p,2);
-    // Push(p,3);
-    printf("%d",StackIsEmpty(p));
+    Push(p,1);
+    Push(p,2);
+    Push(p,3);
+    printf("%d\n",p->data[1]);
+    printf("%d\n",p->data[0]);
+    printf("%d\n",StackIsEmpty(p));
 }
-
-
-
-
-
-
-
-
-
-
