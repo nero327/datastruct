@@ -27,6 +27,6 @@ int main(){
     int n=6;
     InsertSort_mid(a,n);
     for(int i=0;i<n;++i){
-        printf("%d",a[i]);
+        printf("%d\n",a[i]);
     }
 }
