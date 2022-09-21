@@ -143,7 +143,6 @@ int Partition(int a[], int low, int high) {
 
 int *QuickSort(int a[], int low, int high) {
     if (low < high) {
-        // printf("year!");
         int position = Partition(a, low, high);
         QuickSort(a, low, position - 1);
         QuickSort(a, position + 1, high);
