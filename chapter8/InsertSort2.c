@@ -17,6 +17,6 @@ int main(){
     int n=7;
     InsertSort2(a, n);
     for(int i=0;i<n;++i){
-        printf("%d",a[i]);
+        printf("%d\n",a[i]);
     }
 }

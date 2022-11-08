@@ -1,31 +1,28 @@
-#include <stdio.h>
-//冒泡排序
-void BubbleSort(int a[], int n) {
-  int temp = 0;
-  int flag = 1;
-  for (int i = 0; i < n - 1; i++) {
-    for (int j = 0; j < n - i; j++) {
-      if (a[j] > a[j + 1]) {
-        flag = 0;
-        temp = a[j];
-        a[j] = a[j + 1];
-        a[j + 1] = temp;
+#include<stdio.h>
+
+int *BubbleSort(int *a,int l){
+  for (int i=0;i<l-1;i++){
+    int flag=0;
+    for (int j=0;j<l-i-1;j++){
+      printf("%dhaha\n",j);
+      if(a[j]>a[j+1]){
+        int temp=a[j];
+        a[j]=a[j+1];
+        a[j+1]=temp;
+        flag=1;
       }
     }
-    if (flag == 1) {
-      break;
-    }
+    if(flag==0)
+      return a;
   }
+  return a;
 }
-
-int main() {
-  //   int a[] = {6, 5, 4, 3, 2, 1};
-  //   int a[] = {2, 3, 4, 5, 6, 1};
-  int a[] = {1, 2, 3, 4, 5, 6};
-  // int a[] = {2,1,20,6,5,4,10,9,8};
-  int n = 6;
-  BubbleSort(a, n);
-  for (int i = 0; i < n; ++i) {
-    printf(" %d", a[i]);
+int main(){
+  int a[]={5,3,2,1,5,1};
+  // int a[]={1,2,3,4,5,6};
+  int l=6;
+  int *b=BubbleSort(a,l);
+  for (int i=0;i<l;i++){
+    printf("%d\n",b[i]);
   }
 }

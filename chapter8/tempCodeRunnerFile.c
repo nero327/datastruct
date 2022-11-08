@@ -1,3 +1,1 @@
-temp=a[i];
-        a[i]=a[min];
-        
+a[j]=temp;

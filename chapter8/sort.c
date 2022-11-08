@@ -192,12 +192,12 @@ int main() {
   int high=5;
   for (int i = 0; i < l; i++) {
     // printf("%d\n",SelectSort(a, l)[i]);
-    // printf("%d\n",InsertSort1(a, l)[i]);
+    printf("%d\n",InsertSort1(a, l)[i]);
     // printf("%d\n",BubbleSort(a, l)[i]);
     // printf("%d\n", Shellsort(a, l)[i]);
     // printf("%d\n", MergeSort(a,low,high)[i]);
     // printf("%d\n", QuickSort(a,low,high)[i]);
     // printf("%d\n", HeapSort(a,l)[i]);
-    printf("%d\n", InsertSort_mid(a,l)[i]);
+    // printf("%d\n", InsertSort_mid(a,l)[i]);
   }
 }
